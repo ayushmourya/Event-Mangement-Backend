@@ -1,0 +1,14 @@
+const express = require("express");
+const router = express.Router();
+const eventController = require("../controller/eventController");
+router.post("/event/create-event", eventController.createEvent);
+router.put("/event/update-event", eventController.updateEvent);
+router.get("/event/get-all", eventController.getAllEvents);
+router.get("/event/single-event", eventController.getSingleEvent);
+router.post("/event/join-event", eventController.joinEvent);
+router.post("/event/remove-joined-event", eventController.removeJoinedEvent);
+router.delete("/event/delete-event", eventController.deleteEvent);
+router.get("/event/upcoming-events", eventController.upcomingEvents);
+router.post("/event/add-wishlist", eventController.addWishList);
+router.post("/event/remove-wishlist", eventController.removeWatchList);
+module.exports = router;
